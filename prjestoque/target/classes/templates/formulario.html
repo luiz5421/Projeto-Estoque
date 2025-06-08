@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+    <form th:action="@{${link}}" method="POST" th:object="${produto}">
+        Nome: <input type="text" th:field="*{nome}" ><br>
+        Valor: <input type="text" th:field="*{valor}" ><br>
+        Categoria: <input type="text" th:field="*{categoria}" ><br>
+        Quantidade: <input type="text" th:field="*{quantidade}" ><br>
+        <input type="submit" th:value="${valor}">
+    </form>
+</body>
+</html>
