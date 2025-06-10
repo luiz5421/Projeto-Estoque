@@ -1,0 +1,153 @@
+/* ----- BASE ----- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ----- TÍTULOS ----- */
+h1 {
+    background-color: #007bff;
+    color: white;
+    padding: 0;
+    width: 100%;
+    margin: 0 0 30px 0;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* ----- FORMULÁRIO ----- */
+form {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Campos de texto */
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Rótulos */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+/* Botão do formulário */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* ----- TABELA DE LISTAGEM ----- */
+table {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ----- BOTÕES ----- */
+a, input[type="submit"].btn-pequeno {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #218838;
+}
+
+input[type="submit"].btn-pequeno {
+    background-color: #dc3545;
+    width: auto;
+}
+
+input[type="submit"].btn-pequeno:hover {
+    background-color: #c82333;
+}
+
+/* ----- RESPONSIVO ----- */
+@media (max-width: 600px) {
+    form {
+        padding: 25px 20px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    a, input[type="submit"], input[type="submit"].btn-pequeno {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}

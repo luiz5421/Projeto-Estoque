@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>PRIMEIRA PAGINA</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/estiloindex.css}">
+</head>
+<body>
+    <h1>SISTEMA DE ESTOQUE</h1>
+    <section>
+        <div>
+            <a th:href="@{/formulario}">
+                CADASTRAR PRODUTO
+            </a>
+        
+            <a th:href="@{/listar}">
+                LISTAR PRODUTOS
+            </a>
+        </div>
+    </section>
+</body>
+</html>

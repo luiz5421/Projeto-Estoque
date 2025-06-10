@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>LISTAGEM DE CLIENTES</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/estilo.css}">
+</head>
+<body>
+    <h1>LISTAGEM DE PRODUTOS</h1>
+    <div>
+            <a th:href="@{/}">
+                VOLTAR
+            </a>
+            
+            <a th:href="@{/formulario}">
+                CADASTRAR PRODUTO
+            </a>
+            
+        </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>VALOR</th>
+                <th>CATEGORIA</th>
+                <th>QUANTIDADE</th>
+                <th>EDITAR</th>
+                <th>DELETAR</th>
+            </tr>
+        </thead>
+        <tbody th:each="prod : ${produtos}">
+            <tr>
+                <td th:text="${prod.id}"></td>
+                <td th:text="${prod.nome}"></td>
+                <td th:text="${prod.valor}"></td>
+                <td th:text="${prod.categoria}"></td>
+                <td th:text="${prod.quantidade}"></td>
+
+                <td><a th:href="${'/editar/' + prod.id}">Editar</a></td>
+                <td>
+                    <form th:action="${'/deletar/' + prod.id}" method="post">
+                        <input type="submit" value="Deletar">
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
