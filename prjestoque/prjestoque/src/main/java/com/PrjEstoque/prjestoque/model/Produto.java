@@ -11,6 +11,7 @@ public class Produto {
 
     public Produto(){}
 
+
     //CADASTRO
     public Produto(String nome,float valor, String categoria,  int quantidade) {
         this.categoria = categoria;
